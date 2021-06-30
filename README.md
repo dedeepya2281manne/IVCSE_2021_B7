@@ -27,7 +27,7 @@ xlrd >=2.01
 
 3. Project Files
 
- Collab Files
+ Colab Files
 	a. Copy_of_ckd (.ipynb)
 	b. Copy_of_ckd (.py)
 	c. kidneydataset (.csv, Original dataset)
