@@ -1,10 +1,10 @@
 # IVCSE_2021_B7CONTENTS OF THIS FILE
-1. Purpose of the project
-2. Software files
-3. Project files
-4. Important Links
-5. Project Execution Steps
-6. GitHub link to project
+	1. Purpose of the project
+	2. Software files
+	3. Project files
+	4. Important Links
+	5. Project Execution Steps
+	6. GitHub link to project
 
 
 1. Purpose of the Project
