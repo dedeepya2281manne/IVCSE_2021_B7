@@ -1,4 +1,4 @@
-# IVCSE_2021_B7CONTENTS OF THIS FILE
+# Chronic Kidney Disease Prediction
 	1. Purpose of the project
 	2. Software files
 	3. Project files
@@ -27,40 +27,39 @@ xlrd >=2.01
 
 3. Project Files
 
- Colab Files
-	a. Copy_of_ckd (.ipynb)
-	b. Copy_of_ckd (.py)
-	c. kidneydataset (.csv, Original dataset)
-	d. new (.csv, new dataset after data augmentation)
-	e. data-augmentation (.py)
+    Colab Files
+	1. Copy_of_ckd (.ipynb)
+	2. Copy_of_ckd (.py)
+	3. kidneydataset (.csv, Original dataset)
+	4. new (.csv, new dataset after data augmentation)
+	5. data-augmentation (.py)
 
- User-Interface Files
-	a. templates (folder, which consists of html pages - homepage2.html)
-	b. static (folder, which consists of css files)
-	c. dataset1 (comma seperated text file, which contain all the columns)
-	d. dataset2 (comma seperated text file, which contain only selected the columns)
-	e. proj2 (.py file, contains the code for user interface or flask file)
+    User-Interface Files
+	1. templates (folder, which consists of html pages - homepage2.html)
+	2. static (folder, which consists of css files)
+	3. dataset1 (comma seperated text file, which contain all the columns)
+	4. dataset2 (comma seperated text file, which contain only selected the columns)
+	5. proj2 (.py file, contains the code for user interface or flask file)
 
 
 4. Important Links
 
-	a. numpy -  https://numpy.org/install/
-	b. pandas - https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html
-	c. scikit-learn- https://scikit-learn.org/stable/install.html
-	d. Flask - https://flask.palletsprojects.com/en/2.0.x/installation/
+	1. numpy -  https://numpy.org/install/
+	2. pandas - https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html
+	3. scikit-learn- https://scikit-learn.org/stable/install.html
+	4. Flask - https://flask.palletsprojects.com/en/2.0.x/installation/
 
 
 5. Project Execution Steps
 
- User-Interface 
-Step 1 : Create a folder and place dataset1.txt,dataset2.txt,proj2.py files in it.
-Step 2 : Create a folder with name templates in the previous folder.
-Step 3 : Place the homepage2.html file in templates folder.
-Step 4 : Open command prompt and Set the location where the python file (proj2.py)  is located
-Step 5 : Run the python (proj2.py) file
-Step 6 : Click on the link generated
-Step 7 : Paste it on the browser and Enter the values and click on the predict button
-Step 8 : The output is displayed
+	1 : Create a folder and place dataset1.txt,dataset2.txt,proj2.py files in it.
+	2 : Create a folder with name templates in the previous folder.
+	3 : Place the homepage2.html file in templates folder.
+	4 : Open command prompt and Set the location where the python file (proj2.py)  is located
+	5 : Run the python (proj2.py) file
+	6 : Click on the link generated
+	7 : Paste it on the browser and Enter the values and click on the predict button
+	8 : The output is displayed
 
 6. Github link to project
 
