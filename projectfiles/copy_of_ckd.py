@@ -541,7 +541,7 @@ ffs1.k_feature_idx_
 
 print(data.shape)
 
-X=data.iloc[:,[2, 3, 4, 5, 6, 7, 8, 11, 13, 15, 17, 18, 19, 20, 21, 22, 23]]
+X=data.iloc[:,[2, 3, 4, 5, 6, 7, 8,11,13,15,17, 18, 19, 20, 21, 22, 23]]
 y=data.iloc[:,24]
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size  = 0.3)
 
@@ -560,3 +560,32 @@ print('mse',mse)
 rmse = mse**0.5
 print(rmse)
 
+model = svm.SVC(kernel='rbf')
+model.fit(X_train,y_train)
+predict_test= model.predict(X_test)
+accuracy_test_svm = accuracy_score(y_test,predict_test)
+print(confusion_matrix(y_test,predict_test))
+print('accuracy_test',accuracy_test_svm)
+#Here true positive refer to (0,0) and true negative refer to (1,1) so 
+#accuracy = (tp+tn)/(tp+tn+fp+fn)
+
+mse = np.sum((predict_test-y_test)**2)/len(predict_test)
+print('mse',mse)
+
+rmse = mse**0.5
+print(rmse)
+
+model = svm.SVC(kernel='sigmoid')
+model.fit(X_train,y_train)
+predict_test= model.predict(X_test)
+accuracy_test_svm = accuracy_score(y_test,predict_test)
+print(confusion_matrix(y_test,predict_test))
+print('accuracy_test',accuracy_test_svm)
+#Here true positive refer to (0,0) and true negative refer to (1,1) so 
+#accuracy = (tp+tn)/(tp+tn+fp+fn)
+
+mse = np.sum((predict_test-y_test)**2)/len(predict_test)
+print('mse',mse)
+
+rmse = mse**0.5
+print(rmse)

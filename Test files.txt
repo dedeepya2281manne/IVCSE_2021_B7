@@ -1,0 +1,18 @@
+
+TESTCASE 1 :
+
+Input : 
+	 Sg=1.01 , Al=3 , Su=2 , Rbc=0 , Pc=1 , Pcc=1 , Ba=1 , Sc=4.1 , 
+	 
+	 Pot=6.4 , Rc=2.6 , Htn=1 , Dm=1 , Cad=1 , Appetite=1 , Pe=1, Ane=0
+
+Output : 1
+
+TESTCASE 2 :
+
+Input :
+	 Sg=1.01 , Al=0 , Su=0 , Rbc=0 , Pc=0 , Pcc=0 , Ba=0 , Sc=1 ,
+	 
+	 Pot=6.5 , Rc=8 , Htn=0 , Dm=0 , Cad=0 , Appetite=1 , Pe=1, Ane=0	
+
+Output : 0

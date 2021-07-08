@@ -12,46 +12,63 @@ button{
 input { 
   margin-bottom: 10px; background: rgba(0,0,0,0.3);border: none;
   padding: 10px;border-radius: 4px;color: white;
+  width: 20em;
 }
 .class1{
-  column-count: 3;
+  column-count: 4;
 }
 select {
   background: rgba(0,0,0,0.3);border: none;outline: none;
   padding: 10px;color: white;border-radius: 4px;width: 200px;
 }
+label{
+	color: pink;
+}
 </style>
 <body>
   <h1><center>Predict CKD</center></h1>
-    <form action="{{ url_for('predictckd')}}"method="post" id="todo-form">
+    <form action="{{ url_for('predictckd')}}"method="post" onsubmit="return validateForm()" name="form1">
     <div class = "class1" >
-      <input type="text" name="0"  placeholder="Age" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="1" placeholder="Blood Pressure" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="2" placeholder="Specific Gravity (1.010 to 1.030)" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="3" placeholder="Albumin (0,1,2,3,4,5)" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="4" placeholder="Sugar (0,1,2,3,4,5)" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="5" placeholder="Red Blood Cells" required="required" size="50" autocomplete="off"><br>
-      <input type="text" name="6" placeholder="Pus Cell (Normal - 0, Abnormal - 1)" required="required" size="50" autocomplete="off"><br>
-      <input type="text" name="7" placeholder="Pus Cell Clumps (Not present - 0, present - 1)" required="required" size="50" autocomplete="off"><br>
-      <input type="text" name="8" placeholder="Bacteria (Not Present - 0, Present - 1)Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="9" placeholder="Blood Glucose Random" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="10" placeholder="Blood Urea" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="11" placeholder="Serum Creatinine" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="12" placeholder="Sodium" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="13" placeholder="Patassium" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="14" placeholder="Hemoglobin" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="15" placeholder="Packed Cell Volume" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="16" placeholder="white Blood Cell Count" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="17" placeholder="Red Blood Cell Count" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="18" placeholder="Hypertension (Yes - 1, No - 0) Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="19" placeholder="Diabetes Mellitus (Yes - 1, No - 0) Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="20" placeholder="Coronay Artery Disease (Yes - 1, No - 0) Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="21" placeholder="Appetite (Good - 0,Poor - 1)Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="22" placeholder="Pedal Edema(Yes - 1, No - 0) Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
-      <input type="text" name="23" placeholder="Anemia (Yes - 1, No - 0) Enter 0 or 1" required="required" size="50" autocomplete="off"/><br>
+      Specific gravity: <br>
+      <input type="number" name="2" placeholder="Specific Gravity (1.010 to 1.030)" required="required"  autocomplete="off" min="1" max="1.05" step=0.01/><br>
+      Albumin: <br>
+      <input type="number" name="3" placeholder="Albumin (0,1,2,3,4,5)" required="required"  autocomplete="off" min="0" max="5" /><br>
+      Sugar: <br>
+      <input type="number" name="4" placeholder="Sugar (0,1,2,3,4,5)" required="required"  autocomplete="off" min="0" max="5"/><br>
+      Red Blood Cells: <br>
+      <input type="number" name="5" placeholder="Red Blood Cells (Normal - 0, Abnormal - 1)Enter 0 or 1" required="required" autocomplete="off" min="0" max="1"><br>
+      Pus Cell: <br>
+      <input type="number" name="6" placeholder="Pus Cell (Normal - 0, Abnormal - 1)" required="required" autocomplete="off" min="0" max="1"><br>
+      Pus Cell Clumps: <br>
+      <input type="number" name="7" placeholder="Pus Cell Clumps (Not present - 0, present - 1)" required="required"  autocomplete="off" min="0" max="1"><br>
+      Bacteria: <br>
+      <input type="number" name="8" placeholder="Bacteria (Not Present - 0, Present - 1)Enter 0 or 1" required="required"  autocomplete="off" min="0" max="1"/><br>
+      Serum Creatinine:<br> 
+      <input type="number" name="11" placeholder="Serum Creatinine" required="required"  autocomplete="off" min="0.1" max="54" step="0.01"/><br>
+      Potassium: <br>
+      <input type="number" name="13" placeholder="Patassium" required="required"  autocomplete="off" min="0.9" max="14" step="0.01"/><br>
+      Red Blood Cell Count:
+      <input type="number" name="17" placeholder="Red Blood Cell Count" required="required"  autocomplete="off" min="2.1" max="9" step="0.01"/><br>
+      Hypertension: <br>
+      <input type="number" name="18" placeholder="Hypertension (Yes - 1, No - 0) Enter 0 or 1" required="required" autocomplete="off" min="0" max="1"/><br>
+      Diabetes Mellitus:<br>
+      <input type="number" name="19" placeholder="Diabetes Mellitus (Yes - 1, No - 0) Enter 0 or 1" required="required" autocomplete="off" min="0" max="1"/><br>
+      Coronary Artery Disease: <br>
+      <input type="number" name="20" placeholder="Coronay Artery Disease (Yes - 1, No - 0) Enter 0 or 1" required="required"autocomplete="off" min="0" max="1"/><br>
+      Appetite:<br>
+      <input type="number" name="21" placeholder="Appetite (Good - 0,Poor - 1)Enter 0 or 1" required="required"  autocomplete="off" min="0" max="1"/><br>
+      Pedal Edema: <br>
+      <input type="number" name="22" placeholder="Pedal Edema(Yes - 1, No - 0) Enter 0 or 1" required="required" autocomplete="off" min="0" max="1"/><br>
+      Anemia:<br>
+      <input type="number" name="23" placeholder="Anemia (Yes - 1, No - 0) Enter 0 or 1" required="required" autocomplete="off" min="0" max="1"/><br>
     </div>
       <button type="submit">Predict</button>
     </form>
+    
     <h3>Your predicted value is:</h3>{{prediction_text}} 
+
 </body></html>
+
+
+
 
